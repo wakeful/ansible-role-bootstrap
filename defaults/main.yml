@@ -1,0 +1,4 @@
+---
+bootstrap_user: adrian
+bootstrap_group: ops
+bootstrap_authorized_key: https://raw.githubusercontent.com/wakeful/.pub/master/id_rsa_48k.pub

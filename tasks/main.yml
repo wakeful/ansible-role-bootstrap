@@ -1,0 +1,7 @@
+---
+- name: install packages
+  raw: /usr/sbin/pkg install -y ca_root_nss python
+- name: create new user
+  user: group={{ bootstrap_group }} name={{ bootstrap_user }}
+- name: install new authorized key
+  authorized_key: key={{ bootstrap_authorized_key }} user={{ bootstrap_user }}
