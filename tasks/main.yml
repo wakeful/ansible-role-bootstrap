@@ -1,6 +1,8 @@
 ---
 - name: install packages
   raw: /usr/sbin/pkg install -y ca_root_nss python
+- name: create bootstrap_group
+  group: name={{ bootstrap_group }} state=present
 - name: create new user
   user: group={{ bootstrap_group }} name={{ bootstrap_user }}
 - name: install new authorized key
